@@ -10,11 +10,10 @@ console.log("ahoy mate")
 // The output of each of the functions should immediately appear as well.
 
 document.getElementById("inputBtn").addEventListener("click", function reversal() {
-	var reverse = document.getElementById("userInput").reverse;
-	console.log("reversed way ", reverse);
+	var initialData = document.getElementById("userInput");
+	var reversedData = initialData.reverse;
+	console.log("reversed way ", reversedData);
 });
-
-
 
 // function alphabits() {
 	
