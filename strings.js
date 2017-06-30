@@ -9,10 +9,12 @@ console.log("ahoy mate")
 // 7. When the user presses the enter key in the text input, or clicks the button, set the value of the testString variable (see below) to the value of the input.
 // The output of each of the functions should immediately appear as well.
 
-function reversal() {
-	var userInput = document.getElementById("userInput");
-	userInput.reverse();
-};
+document.getElementById("inputBtn").addEventListener("click", function reversal() {
+	var reverse = document.getElementById("userInput").reverse;
+	console.log("reversed way ", reverse);
+});
+
+
 
 // function alphabits() {
 	
