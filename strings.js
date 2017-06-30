@@ -9,20 +9,26 @@ console.log("ahoy mate")
 // 7. When the user presses the enter key in the text input, or clicks the button, set the value of the testString variable (see below) to the value of the input.
 // The output of each of the functions should immediately appear as well.
 
-document.getElementById("inputBtn").addEventListener("click", function reversal() {
-	var initialData = document.getElementById("userInput");
-	var reversedData = initialData.reverse;
-	console.log("reversed way ", reversedData);
-});
+var button = document.getElementById("button").addEventListener("click", doTheThing);
 
-// function alphabits() {
-	
-// }
+var gimmeIt = document.getElementById("box");
 
-// function palindrome() {
+function doTheThing(somethingGoesHere) {
 
-// }
+	function reversal() {
+		gimmeIt.innerHTML = document.getElementById("input").value.split("").reverse().join(""); 
+		console.log("reversal", gimmeIt.innerHTML);
+	}
 
+	function alphabits() {
+		gimmeIt.innerHTML = document.getElementById("input").value.split("").sort().join("");
+		console.log("alphabitis ", gimmeIt.innerHTML);
+	}
+
+	// function palindrome() {
+
+	// }
+};
 // var testString = "";
 // reversal(testString);
 // alphabits(testString);
