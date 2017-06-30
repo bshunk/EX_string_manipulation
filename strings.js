@@ -9,29 +9,37 @@ console.log("ahoy mate")
 // 7. When the user presses the enter key in the text input, or clicks the button, set the value of the testString variable (see below) to the value of the input.
 // The output of each of the functions should immediately appear as well.
 
+var string = document.getElementById("input");
 var button = document.getElementById("button").addEventListener("click", doTheThing);
-
 var gimmeIt = document.getElementById("box");
 
-function doTheThing(somethingGoesHere) {
-
-	function reversal() {
-		gimmeIt.innerHTML = document.getElementById("input").value.split("").reverse().join(""); 
-		console.log("reversal", gimmeIt.innerHTML);
-	}
-
-	function alphabits() {
-		gimmeIt.innerHTML = document.getElementById("input").value.split("").sort().join("");
-		console.log("alphabitis ", gimmeIt.innerHTML);
-	}
-
-	// function palindrome() {
-
-	// }
+function doTheThing() {
+	reversal();
+	alphabits();
+	palindrome();
+	console.log("palindrome", palindrome());
 };
+
+function reversal() {
+	gimmeIt.innerHTML += `<p>${string.value.split("").reverse().join("")}</p>`; 
+	console.log("reversal", gimmeIt.innerHTML);
+	return string.value.split("").reverse().join("")
+}
+
+function alphabits() {
+	gimmeIt.innerHTML += `<p>${string.value.split("").reverse().join("")}</p>`;
+	console.log("alphabitis ", gimmeIt.innerHTML);
+}
+
+function palindrome() {
+	if (string.value.split("").reverse().join("") === string.value) {
+		return `<p>This is a palindrome</p>`
+	}
+}
+
+// FUNCTIONS RETURN TO WHERE IT IS CALLED
+
 // var testString = "";
 // reversal(testString);
 // alphabits(testString);
 // palindrome(testString);
-
-
