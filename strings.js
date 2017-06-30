@@ -27,7 +27,7 @@ function reversal() {
 }
 
 function alphabits() {
-	gimmeIt.innerHTML += `<p>${string.value.split("").reverse().join("")}</p>`;
+	gimmeIt.innerHTML += `<p>${string.value.split("").sort().join("")}</p>`;
 	console.log("alphabitis ", gimmeIt.innerHTML);
 }
 
@@ -39,7 +39,8 @@ function palindrome() {
 
 // FUNCTIONS RETURN TO WHERE IT IS CALLED
 
-// var testString = "";
-// reversal(testString);
-// alphabits(testString);
-// palindrome(testString);
+var testString = "";
+reversal(testString);
+alphabits(testString);
+palindrome(testString);
+
