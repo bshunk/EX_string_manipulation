@@ -1,5 +1,3 @@
-console.log("ahoy mate")
-
 // 1. Copy the code below into the JavaScript file
 // 2. In your HTML, create an text input and a button.
 // 3. The text input should only accept letters. No numbers.
@@ -14,33 +12,58 @@ var button = document.getElementById("button").addEventListener("click", doTheTh
 var gimmeIt = document.getElementById("box");
 
 function doTheThing() {
-	reversal();
-	alphabits();
-	palindrome();
-	console.log("palindrome", palindrome());
+	var newString = string.value.split("");
+	var revString = reversal(newString);
+	gimmeIt.innerHTML += alphabits(newString);
+	gimmeIt.innerHTML += palindrome(newString, revString);
 };
 
-function reversal() {
-	gimmeIt.innerHTML += `<p>${string.value.split("").reverse().join("")}</p>`; 
-	console.log("reversal", gimmeIt.innerHTML);
-	return string.value.split("").reverse().join("")
+function reversal(str) {
+	var rev = str.reverse().join("");
+	gimmeIt.innerHTML += `<p>${rev}</p>`; 
+	return rev
 }
 
-function alphabits() {
-	gimmeIt.innerHTML += `<p>${string.value.split("").sort().join("")}</p>`;
-	console.log("alphabitis ", gimmeIt.innerHTML);
+function alphabits(str) {
+	return `<p>${str.sort().join("")}</p>`;
 }
 
-function palindrome() {
-	if (string.value.split("").reverse().join("") === string.value) {
+function palindrome(str, revStr) {
+	if (revStr === string.value) {
 		return `<p>This is a palindrome</p>`
+	} else {
+		return `<p>This is not a palindrome</p>`
 	}
 }
 
 // FUNCTIONS RETURN TO WHERE IT IS CALLED
 
-var testString = "";
-reversal(testString);
-alphabits(testString);
-palindrome(testString);
+// var testString = "";
+
+// function reversal(testString) {
+// 	gimmeIt.innerHTML += `<p>${string.value.split("").reverse().join("")}</p>`; 
+// 	console.log("reversal", gimmeIt.innerHTML);
+// 	return string.value.split("").reverse().join("")
+// };
+
+// function alphabits(testString) {
+// 	gimmeIt.innerHTML += `<p>${string.value.split("").sort().join("")}</p>`;
+// 	console.log("alphabits ", gimmeIt.innerHTML);
+// };
+
+// function palindrome(testString) {
+// 	if (string.value.split("").reverse().join("") === string.value) {
+// 		return `<p>This is a palindrome</p>`
+// 	}
+// };
+
+
+
+
+
+
+
+
+
+
 
