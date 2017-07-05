@@ -11,9 +11,9 @@
 // (see below) to the value of the input.
 // The output of each of the functions should immediately appear as well.
 
-// var string = document.getElementById("input");
-// var button = document.getElementById("button").addEventListener("click", doTheThing);
-// var gimmeIt = document.getElementById("box");
+var string = document.getElementById("input");
+var button = document.getElementById("button").addEventListener("click", doTheThing);
+var gimmeIt = document.getElementById("box");
 
 function doTheThing() {
 	var newString = string.value.split("");
@@ -42,11 +42,14 @@ function palindrome(str, revStr) {
 
 // FUNCTIONS RETURN TO WHERE IT IS CALLED
 
-var testString = document.getElementById("input"); 
-reversal(testString);
-alphabits(testString);
-palindrome(testString);
-
+var testString = document.getElementById("input", function(testString) {
+	reversal(testString);
+		console.log("test string = ", testString);
+	alphabits(testString);
+		console.log("test string = ", testString);
+	palindrome(testString);
+		console.log("test string = ", testString);
+});
 
 
 
