@@ -58,6 +58,8 @@ function alphabits(testString) {
 function palindrome(testString) {
 	if (string.value.split("").reverse().join("") === string.value) {
 		return `<p>This is a palindrome</p>`
+	}else {
+		return `<p>This is NOT a palindrome</p>`
 	}
 };
 
