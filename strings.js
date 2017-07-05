@@ -42,42 +42,24 @@ function palindrome(str, revStr) {
 
 // FUNCTIONS RETURN TO WHERE IT IS CALLED
 
-var testString = document.getElementById("input", function(testString) {
-	reversal(testString);
-		console.log("test string = ", testString);
-	alphabits(testString);
-		console.log("test string = ", testString);
-	palindrome(testString);
-		console.log("test string = ", testString);
-});
+var testString = document.getElementById("input");
 
+function reversal(testString) {
+	gimmeIt.innerHTML += `<p>${string.value.split("").reverse().join("")}</p>`; 
+	console.log("reversal", gimmeIt.innerHTML);
+	return string.value.split("").reverse().join("")
+};
 
+function alphabits(testString) {
+	gimmeIt.innerHTML += `<p>${string.value.split("").sort().join("")}</p>`;
+	console.log("alphabits ", gimmeIt.innerHTML);
+};
 
-
-// function reversal(testString) {
-// 	gimmeIt.innerHTML += `<p>${string.value.split("").reverse().join("")}</p>`; 
-// 	console.log("reversal", gimmeIt.innerHTML);
-// 	return string.value.split("").reverse().join("")
-// };
-
-// function alphabits(testString) {
-// 	gimmeIt.innerHTML += `<p>${string.value.split("").sort().join("")}</p>`;
-// 	console.log("alphabits ", gimmeIt.innerHTML);
-// };
-
-// function palindrome(testString) {
-// 	if (string.value.split("").reverse().join("") === string.value) {
-// 		return `<p>This is a palindrome</p>`
-// 	}
-// };
-
-
-
-
-
-
-
-
+function palindrome(testString) {
+	if (string.value.split("").reverse().join("") === string.value) {
+		return `<p>This is a palindrome</p>`
+	}
+};
 
 
 
