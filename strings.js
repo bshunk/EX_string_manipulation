@@ -1,4 +1,3 @@
-
 let string = document.getElementById("input");
 let button = document.getElementById("button");
 let gimmeIt = document.getElementById("box");
@@ -45,6 +44,3 @@ function clearInput() {
 	testString = "";
 	output.innerHTML = "";
 }
-
-
-
